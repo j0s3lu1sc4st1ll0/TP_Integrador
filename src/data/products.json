@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Base de Teléfono",
+        "price": 1000,
+        "discount": 50,
+        "category": "In-sale",
+        "description": "Base de telefono con forma de clave de Sol.",
+        "image": "base.jpg"
+    },
+    {
+        "name": "Reactor Iron Man",
+        "price": 7000,
+        "discount": 50,
+        "category": "In-sale",
+        "description": "El Reactor Arc es una forma única de una fuente de energía diseñada por Howard Stark y Anton Vanko. Hay dos versiones principales del Reactor Arc: la original, una versión industrial a gran escala, y la versión miniaturizada que fue perfeccionada por Anthony Stark.",
+        "image": "reactor.jpg"
+    },
+    {
+        "name": "Llaveros",
+        "price": 250,
+        "discount": 50,
+        "category": "In-sale",
+        "description": "Llaveros personalizados.",
+        "image": "llaveros.jpg"
+    },
+    {
+        "name": "Creeper",
+        "price": 500,
+        "discount": 50,
+        "category": "In-sale",
+        "description": "El creeper es una criatura hostil común que se acerca sigilosamente al jugador y explota, destruyendo el entorno y dañando tanto al jugador como a otras criaturas dentro del radio de la explosión. Debido a su aspecto y peculiares características, el creeper es considerado un icono de Minecraft.",
+        "image": "creeper.jpg"
+    }
+]

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  <%- include('partials/head') %>
+  <!-- Head -->
+    <title>Inicio</title>
+</head>
+<body>
+    <!-- Header -->
+<%- include('partials/header') %> 
+    <!-- Header -->
+      <div class="px-4 py-5 my-0 text-center bg-dark bg-gradient hr text-white">
+        <h1 class="display-5 fw-bold">Diseñamos e Imprimimos tus ideas</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Podemos diseñar lo que necesitas imprimir, o bien, envIanos tu archivo en .STL para que nosotros lo preparemos para la impresión.</p>
+        </div>
+      </div>
+<!-- Mostrando los productos en venta -->
+      <div class="container products-wrapper">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="display-5 fw-bold text-center">Ofertas</h2>
+          </div>
+          <% products.forEach(producto => { %>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow-sm">
+              <img src="/images/products/<%= producto.image %>" role="img" aria-label="Placeholder: Thumbnail" height="300" width="200" focusable="false" alt="imagen de producto">
+            <div class="card-body">
+                <a href="/products/detail/<%= producto.id %>">
+                  <article class="product-box_data">
+                    <h2> $<%= producto.price %> </h2>
+                    <span>DESCUENTO % <%= producto.discount %> OFF</span>
+                    <p><%= producto.name %></p>
+                    <i class="fas fa-truck"></i>
+                  </article>
+                </a>
+              </div>
+            </div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+      <!-- footer -->
+      <%- include('partials/footer') %> 
+      <!-- footer -->
+</body>
+</html>

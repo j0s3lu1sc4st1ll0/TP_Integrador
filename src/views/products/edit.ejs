@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head') %>
+        <title>Editar Producto</title>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+        <!-- Detalles del producto seleccionado -->
+        <div class="container products-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Detalle del producto: <%= product.name %>
+                    </h2>
+                </div>
+            </div>
+            <div class="product-detail">
+
+
+                <form action="/products/edit/<%= product.id %>" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <img src="/images/products/<%= product.image %>" alt="product image"
+                                class="product-detail-img" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="row product-detail">
+                                <div class="col-12 col-md-6">
+                                    <label for="name" class="form-label">Nombre del producto:</label>
+                                    <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok"
+                                        class="form-input" value="<%=product.name%>">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="price" class="form-label">Precio del producto:</label>
+                                    <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input"
+                                        value="<%=product.price%>">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="discount" class="form-label">Descuento:</label>
+                                    <input type="text" id="discount" name="discount" placeholder="Ej: 15"
+                                        class="form-input" value="<%=product.discount%>">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="category" class="form-label">Categoría:</label>
+                                    <select name="category" id="category" class="form-input">
+                                        <option value="">Elegí</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="description" class="form-label">Descripción:</label>
+                                    <textarea name="description" id="description"
+                                        class="form-input"><%= product.description %></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="action-button edit">Actualizar Producto</button>
+                                    <a href="/" class="action-button home">Volver al inicio</a>
+                                </div>
+                </form>
+
+                </article>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- Detalle del producto seleccionado -->
+
+        <%- include('../partials/footer') %>
+</body>
+
+</html>
